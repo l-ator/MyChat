@@ -1,0 +1,11 @@
+<!--<div class="msg-bubble" [ngClass]="{'msg-mine':isMine,'msg-theirs':!isMine}" ></div>-->
+<div style="width:100%">
+	<div [ngClass]="{'mine':isMine,'theirs':!isMine}">
+		<div class="msg-bubble">
+			<div class="msg-text">
+				<p class="msg-body">{{message.body}}</p>
+				<div class="msg-time"><span>{{message.timestamp | date: 'HH:mm'}}</span> <span  *ngIf="isMine" class="status-icon {{getStatusIcon(message.status)}}"></span></div>
+			</div>
+		</div>
+	</div>
+</div>

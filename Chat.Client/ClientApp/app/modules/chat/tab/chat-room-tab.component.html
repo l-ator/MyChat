@@ -1,0 +1,22 @@
+<div class="tab" [ngClass]="{'hasUnread':unread(), 'selectedTab':isSelected()}" (click)="selectRoom()">
+	<div class="row">
+		<div class="tab-left">
+			<div class="tab-label">
+				<span class="type-icon fa {{tabRoom?.type==roomTypes.Group ? 'fa-users' : 'fa-user'}}"></span>
+				<span class="tab-name">{{tabRoom?.name}}</span>
+			</div>
+			<div class="tab-last-msg" *ngIf="lastMessage()">
+				<span *ngIf="lastMessage().from == auth.currentUser.username" class="status-icon {{getStatusIcon(lastMessage().status)}}"></span>
+				<span *ngIf="lastMessage().from != auth.currentUser.username" class="status-icon fa fa-envelope-open-o"></span>
+				{{lastMessage()?.body}}
+			</div>
+		</div>
+		<div class="tab-right">
+			<div class="tab-time">
+				<span>{{lastMessage()?.timestamp | date: 'HH:mm'}}</span><br />
+				<span *ngIf="unread()" class="badge badge-unread">{{unread()}}</span>
+			</div>
+		</div>
+	</div>
+</div>
+

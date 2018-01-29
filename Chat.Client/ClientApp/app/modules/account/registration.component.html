@@ -1,0 +1,76 @@
+﻿<div class="container authForm">
+	<div class="col-xs-5"></div>
+	<div class="col-xs-3">
+		<h1 style="font-size:35px">Sign Up</h1>
+		<form [formGroup]="registerUserForm" (ngSubmit)="registerNewUser(registerUserForm.value)" autocomplete="off" novalidate>
+			<div class="form-group">
+				<label for="username">Username</label>
+				<tooltip-content #usernameTooltip [ngClass]="{'invisible':registerUserForm.controls.username.valid}">
+					<h6 *ngFor="let err of getErrors(registerUserForm.controls.username.errors)"><span class="fa fa-warning"></span> {{err}}</h6>
+				</tooltip-content>
+				<input formControlName="username"
+					   id="username"
+					   type="text"
+					   class="form-control"
+					   placeholder="Username"
+					   [tooltip]="usernameTooltip"
+					   [tooltipDisabled]="registerUserForm.controls.username.valid || registerUserForm.controls.username.untouched"
+					   tooltipPlacement="right"
+					   [ngClass]="{'error':registerUserForm.controls.username.invalid && registerUserForm.controls.username.touched}" />
+
+			</div>
+			<div class="form-group">
+				<label for="email">Email</label>
+				<tooltip-content #emailTooltip [ngClass]="{'invisible':registerUserForm.controls.email.valid}">
+					<h6 *ngFor="let err of getErrors(registerUserForm.controls.email.errors)"><span class="fa fa-warning"></span> {{err}}</h6>
+				</tooltip-content>
+				<input formControlName="email"
+					   id="email"
+					   type="text"
+					   class="form-control"
+					   placeholder="Email"
+					   [tooltip]="emailTooltip"
+					   [tooltipDisabled]="registerUserForm.controls.email.valid || registerUserForm.controls.email.untouched"
+					   tooltipPlacement="right"
+					   [ngClass]="{'error':registerUserForm.controls.email.invalid && registerUserForm.controls.email.touched}" />
+
+
+			</div>
+			<div class="form-group">
+				<label for="password">Password</label>
+				<tooltip-content #passwordTooltip [ngClass]="{'invisible':registerUserForm.controls.password.valid}">
+					<h6 *ngFor="let err of getErrors(registerUserForm.controls.password.errors)"><span class="fa fa-warning"></span> {{err}}</h6>
+				</tooltip-content>
+				<input formControlName="password"
+					   id="password"
+					   type="password"
+					   class="form-control"
+					   placeholder="Password"
+					   [tooltip]="passwordTooltip"
+					   [tooltipDisabled]="registerUserForm.controls.password.valid || registerUserForm.controls.password.untouched"
+					   tooltipPlacement="right"
+					   [ngClass]="{'error':registerUserForm.controls.password.invalid && registerUserForm.controls.password.touched}" />
+			</div>
+			<div class="form-group">
+				<label for="passwordConfirm">Confirm Password</label>
+				<tooltip-content #passwordConfirmTooltip [ngClass]="{'invisible':registerUserForm.controls.passwordConfirm.valid && !registerUserForm.errors}">
+					<h6 *ngFor="let err of getErrors(registerUserForm.controls.passwordConfirm.errors)"><span class="fa fa-warning"></span> {{err}}</h6>
+					<h6 *ngFor="let err of getErrors(registerUserForm.errors)"><span class="fa fa-warning"></span> {{err}}</h6>
+				</tooltip-content>
+				<input formControlName="passwordConfirm"
+					   id="passwordConfirm"
+					   type="password"
+					   class="form-control"
+					   placeholder="Confirm Password"
+					   [tooltip]="passwordConfirmTooltip"
+					   tooltipPlacement="right"
+					   [ngClass]="{'error': (registerUserForm.controls.passwordConfirm.invalid || registerUserForm.errors) && registerUserForm.controls.passwordConfirm.touched}" />
+			</div>
+			<div style="text-align:center">
+				<button type="submit" style="margin:10px 10px 0 0;width:100px;font-size:18px" class="btn btn-info" [disabled]="registerUserForm.invalid">
+					Register
+				</button>
+			</div>
+		</form>
+	</div>
+</div>

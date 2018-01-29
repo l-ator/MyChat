@@ -1,0 +1,40 @@
+﻿<div class="container-fluid">
+	<div class="row">
+		<div class="col-xs-3" style="padding:0">
+			<!--<chat-room-list></chat-room-list>-->
+			<div class="lobby-bar">
+				<span>Logged in as <b>{{auth.currentUser.username}}</b></span>
+				<!--<button class="btn btn-info send-msg-btn" (click)="newChatroom()">Chat! <i class="fa fa-send"></i> </button>-->
+			</div>
+			<div class="tabs-search">
+				<div>
+					<span class="fa fa-search" *ngIf="!search.length"></span>
+					<span class="fa fa-times-circle" *ngIf="search.length" (click)="search=''"></span>
+					<input [(ngModel)]="search" placeholder="Find or start a new chat.." />
+				</div>
+			</div>
+			<div class="tabs">
+				<div *ngIf="chatRooms.length">
+					<div class="tabs-divider" *ngIf="searchName(chatRooms).length">Open Chatrooms</div>
+					<span *ngFor="let room of searchName(chatRooms)">
+						<chat-room-tab [tabRoom]="room"></chat-room-tab>
+					</span>
+				</div>
+				<div *ngIf="search.length">
+					<div class="tabs-divider" *ngIf="searchAddable(getAddableUsers()).length">Start new Chat</div>
+					<div *ngFor="let addable of searchAddable(getAddableUsers())">
+						<div class="new-chat-tab" (click)="newSingleChat(addable)">
+							<span>{{addable}}</span> <span class="add-icon fa fa-user-plus"></span>
+						</div>
+					</div>
+					<div class="no-result-found" *ngIf="!searchAddable(getAddableUsers()).length && !searchName(chatRooms).length">
+						No user found <span class="fa fa-frown-o"></span>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-9" style="padding:0">
+			<chat-room [(room)]="selectedRoom"></chat-room>
+		</div>
+	</div>
+</div>

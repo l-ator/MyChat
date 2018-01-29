@@ -1,0 +1,18 @@
+<div class="chat-room">
+	<div>
+		<div class="chat-header">
+			<span class="chat-name">{{room?.name}}</span>
+		</div>
+		<div class="msg-list" #msgList [ngStyle]="{'height': room ? '78vh':'85vh' }">
+			<chat-message *ngFor="let message of room?.messages" [message]="message"></chat-message>
+
+			<!--<li *ngFor="let message of room.messages">({{message.timestamp | date: 'HH:mm' }})<strong>{{message.from}}</strong>: {{message.body}}</li>-->
+		</div>
+		<form *ngIf="room" [formGroup]="sendMessageForm" (ngSubmit)="sendMessage(sendMessageForm.value)">
+			<div class="msg-bar">
+					<input formControlName="body" class="msg-textbox" />
+					<button type="submit" class="btn btn-info msg-send-btn" [disabled]="sendMessageForm.invalid"><i class="fa fa-send"></i></button>
+			</div>
+		</form>
+	</div>
+</div>

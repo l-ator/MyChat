@@ -1,0 +1,25 @@
+﻿<div class="container authForm">
+	<div class="col-xs-3 col-xs-offset-5">
+
+		<h1 style="font-size:40px">Login</h1>
+		<form [formGroup]="loginForm" (ngSubmit)="loginForm.valid && loginUser(loginForm.value)" novalidate>
+			<label *ngIf="loginFailed" style="color:red;font-style:italic;font-size:12px">Invalid Login Attempt</label>
+			<div class="form-group">
+				<label for="username"> Username </label>
+				<input type="text" class="form-control" formControlName="username" placeholder="Username" />
+			</div>
+			<div class="form-group">
+				<label for="username"> Password </label>
+				<input type="password" class="form-control" formControlName="password" placeholder="Password" />
+			</div>
+			<div class="form-group">
+				<input type="checkbox" style="height:20px;width:20px" formControlName="rememberMe" /><span style="font-weight:bold;font-size:14px"> Remember Me?</span>
+			</div>
+			<div class="form-group">
+				<input style="width:100px;font-size:18px" type="submit" class="btn btn-info" [disabled]="!loginForm.valid" value="Login" />
+				<span style="font-size: 15px;margin: 0 10px;">or</span>
+				<input style="width:100px;font-size:18px" type="button" class="btn btn-default" [routerLink]="['/account/register']" value="Register" />
+			</div>
+		</form>
+	</div>
+</div>

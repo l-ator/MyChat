@@ -1,0 +1,24 @@
+﻿<div class="container-fluid custom-modal-container">
+	<div class="row modal-header">
+		<div class="col-xs-12" style="padding:0">
+			<span style="font-size:32px">New Chat</span>
+			<span class="fa fa-times closeDialog" (click)="dialog.close()"></span>
+		</div>	
+	</div>
+	<div class="row well">
+		<div class="usernameInput">
+			<label>Username</label>
+			<input [(ngModel)]="userSearch" type="text" placeholder="Find user.." />
+			<button class="btn btn-info" (click)="findUser(userSearch)"><i class="fa fa-search"></i></button>
+		</div>
+		<div class="messageInput" *ngIf="username">
+			<span>Message for <strong>{{username}}</strong></span>
+			<hr />
+			<textarea type="text" placeholder="Hello, Let's chat!" [(ngModel)]="message"></textarea>
+		</div>
+	</div>
+	<div class="row" style="margin-top:20px">
+		<button style="float:right;margin:10px" class="btn btn-default" (click)="dialog.close()"> <span class="fa fa-times"></span> Close</button>
+		<button style="float:right;margin:10px" class="btn btn-info" (click)="newChat()" [disabled]="!username || !message.length || wait"><span class="fa fa-plus-square"></span> Send</button>
+	</div>
+</div>

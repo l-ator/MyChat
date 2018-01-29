@@ -1,0 +1,14 @@
+<nav class="navbar navbar-inverse">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<img src="https://www.talentlms.com/blog/wp-content/uploads/2016/03/live-chat.png" style="height:35px;margin:10px 20px 5px" />			
+		</div>
+			<a class="navbar-brand" href="#" [routerLink]="['home']"><strong>MyChat</strong></a>
+		<ul class="nav navbar-nav navbar-right">
+			<li *ngIf="!isAuthenticated()"><a href="#" [routerLink]="['home']"><span class="fa fa-sign-in"></span> Login</a></li>
+			<li *ngIf="!isAuthenticated()"><a href="#" [routerLink]="['account/register']"><span class="fa fa-user-plus"></span> Register</a></li>
+			<li *ngIf="isAuthenticated()"><a style="cursor:default">Hi, {{auth.currentUser.username}}!</a></li>
+			<li *ngIf="isAuthenticated()"><a href="#" [routerLink]="['home']" (click)="logoutUser()"><span class="fa fa-sign-out"></span> Log Out</a></li>
+		</ul>
+	</div>
+</nav>

@@ -1,0 +1,15 @@
+C:\Projects\Chat\Chat.Service\bin\Release\netcoreapp2.0\Chat.Service.deps.json
+C:\Projects\Chat\Chat.Service\bin\Release\netcoreapp2.0\Chat.Service.dll
+C:\Projects\Chat\Chat.Service\bin\Release\netcoreapp2.0\Chat.Service.pdb
+C:\Projects\Chat\Chat.Service\bin\Release\netcoreapp2.0\Chat.Infrastructure.dll
+C:\Projects\Chat\Chat.Service\bin\Release\netcoreapp2.0\Chat.Repository.dll
+C:\Projects\Chat\Chat.Service\bin\Release\netcoreapp2.0\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Projects\Chat\Chat.Service\bin\Release\netcoreapp2.0\Chat.Infrastructure.pdb
+C:\Projects\Chat\Chat.Service\bin\Release\netcoreapp2.0\Chat.Repository.pdb
+C:\Projects\Chat\Chat.Service\bin\Release\netcoreapp2.0\Microsoft.AspNetCore.Mvc.Core.xml
+C:\Projects\Chat\Chat.Service\obj\Release\netcoreapp2.0\Chat.Service.csprojResolveAssemblyReference.cache
+C:\Projects\Chat\Chat.Service\obj\Release\netcoreapp2.0\Chat.Service.csproj.CoreCompileInputs.cache
+C:\Projects\Chat\Chat.Service\obj\Release\netcoreapp2.0\Chat.Service.AssemblyInfoInputs.cache
+C:\Projects\Chat\Chat.Service\obj\Release\netcoreapp2.0\Chat.Service.AssemblyInfo.cs
+C:\Projects\Chat\Chat.Service\obj\Release\netcoreapp2.0\Chat.Service.dll
+C:\Projects\Chat\Chat.Service\obj\Release\netcoreapp2.0\Chat.Service.pdb
