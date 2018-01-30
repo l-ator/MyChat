@@ -52,5 +52,6 @@
 
 .msg-send-btn[disabled] {
 	background-color: #cecece;
-	border-color:#aaa
+	border-color:#aaa;
+	opacity:1 !important;
 }

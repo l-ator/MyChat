@@ -60,6 +60,7 @@ export class StompService {
 	/** Initialize STOMP Client */
 	protected initStompClient(): void {
 		let hostUrl = this.config.stompSettings.hostUrl
+		console.log(this.config)
 
 		if (typeof (hostUrl) === 'string') 
 			this.client = Stomp.client(hostUrl)

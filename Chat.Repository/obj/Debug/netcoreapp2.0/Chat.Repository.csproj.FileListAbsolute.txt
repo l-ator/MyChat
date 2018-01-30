@@ -20,3 +20,14 @@ C:\Projects\Chat\Chat.Repository\obj\Debug\netcoreapp2.0\Chat.Repository.Assembl
 C:\Projects\Chat\Chat.Repository\obj\Debug\netcoreapp2.0\Chat.Repository.AssemblyInfo.cs
 C:\Projects\Chat\Chat.Repository\obj\Debug\netcoreapp2.0\Chat.Repository.dll
 C:\Projects\Chat\Chat.Repository\obj\Debug\netcoreapp2.0\Chat.Repository.pdb
+C:\Projects\MyChat\MyChat\Chat.Repository\bin\Debug\netcoreapp2.0\Chat.Repository.deps.json
+C:\Projects\MyChat\MyChat\Chat.Repository\bin\Debug\netcoreapp2.0\Chat.Repository.dll
+C:\Projects\MyChat\MyChat\Chat.Repository\bin\Debug\netcoreapp2.0\Chat.Repository.pdb
+C:\Projects\MyChat\MyChat\Chat.Repository\bin\Debug\netcoreapp2.0\Chat.Infrastructure.dll
+C:\Projects\MyChat\MyChat\Chat.Repository\bin\Debug\netcoreapp2.0\Chat.Infrastructure.pdb
+C:\Projects\MyChat\MyChat\Chat.Repository\obj\Debug\netcoreapp2.0\Chat.Repository.csprojResolveAssemblyReference.cache
+C:\Projects\MyChat\MyChat\Chat.Repository\obj\Debug\netcoreapp2.0\Chat.Repository.csproj.CoreCompileInputs.cache
+C:\Projects\MyChat\MyChat\Chat.Repository\obj\Debug\netcoreapp2.0\Chat.Repository.AssemblyInfoInputs.cache
+C:\Projects\MyChat\MyChat\Chat.Repository\obj\Debug\netcoreapp2.0\Chat.Repository.AssemblyInfo.cs
+C:\Projects\MyChat\MyChat\Chat.Repository\obj\Debug\netcoreapp2.0\Chat.Repository.dll
+C:\Projects\MyChat\MyChat\Chat.Repository\obj\Debug\netcoreapp2.0\Chat.Repository.pdb

@@ -21,6 +21,8 @@
     <PackageReference Include="FB.AspNetCore.Identity.MongoDB" Version="2.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Extensions" Version="2.0.1" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Abstractions" Version="2.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="2.0.0" />
     <PackageReference Include="MongoDB.Driver" Version="2.4.4" />
   </ItemGroup>
 
