@@ -1,7 +1,7 @@
 # MyChat 
 MyChat is a web application built upon the following technologies:
 
- ~ ASP.NET Core 2.0 (server-side)
+ ~ ASP.NET Core 2.0 (server-side)\n
  ~ Angular 4 (front-end client app )
  ~ Node.js (for client-side packages managment)
  ~ MongoDB (storage)
