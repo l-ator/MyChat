@@ -16,4 +16,4 @@
 
 ##### The system keeps track of every message state transition (displaying wheter each message has been Sent, Delivered, Read, etc.). 
 
-###### Although basic communication is completely functional, please note this is an embrional stage of the app and a lot has still to be implemented.
+###### Although basic communication is completely functional, please note this is an embrional stage and a lot has still to be implemented.
